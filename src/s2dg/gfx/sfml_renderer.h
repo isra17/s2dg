@@ -8,18 +8,25 @@
 
 namespace s2dg {
 
+	class EntityManager;
+
 	class SfmlRenderer :
 		public Engine {
 	public:
+		static const int CID = 0xA49A11E3;
+
 		SfmlRenderer();
 		virtual ~SfmlRenderer();
 
 		std::shared_ptr<sf::Window> window() { return _window; };
 
-		virtual void process();
+		void on_start() override;
+		void process() override;
 
 	private:
 		std::shared_ptr<sf::RenderWindow> _window;
+
+		EntityManager* _entity_manager;
 	};
 
 }

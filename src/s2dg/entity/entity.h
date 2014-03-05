@@ -4,6 +4,8 @@
 #include <map>
 #include <memory>
 
+#include <SFML/Graphics.hpp>
+
 namespace s2dg {
 
 	class Component;
@@ -16,12 +18,14 @@ namespace s2dg {
 		void add_component(std::shared_ptr<Component> component);
 
 		/** Return a pointer to the component with the type of cid or null if none were found **/
-		std::shared_ptr<Component> get_component(int cid);
+		std::shared_ptr<Component> get_component(int cid) const;
 
 		template<class C>
-		std::shared_ptr<Component> get_component() {
+		std::shared_ptr<Component> get_component() const {
 			return get_component(C::CID);
 		};
+
+		const sf::Transformable& transform() const { return _transform; };
 
 		// Init components
 		void init();
@@ -31,7 +35,11 @@ namespace s2dg {
 
 		// Free entity ressource
 		void deinit();
+		
+		// Render entity
+		void render(sf::RenderTarget& target) const;
 	private:
+		sf::Transformable _transform;
 		std::map< int, std::shared_ptr<Component> > _components;
 	};
 

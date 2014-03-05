@@ -11,6 +11,8 @@ namespace s2dg {
 	class SfmlInput :
 		public Engine {
 	public:
+		static const int CID = 0x84D88C2F;
+
 		SfmlInput(std::shared_ptr<sf::Window> window);
 		virtual ~SfmlInput();
 

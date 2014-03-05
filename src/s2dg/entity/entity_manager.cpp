@@ -3,7 +3,9 @@
 
 using namespace s2dg;
 
-EntityManager::EntityManager() {}
+EntityManager::EntityManager() 
+: Engine(EntityManager::CID)
+{}
 
 
 EntityManager::~EntityManager() {}

@@ -7,13 +7,17 @@ namespace s2dg {
 
 	class Engine {
 	public:
-		Engine();
+		Engine(int cid);
 		virtual ~Engine();
 
 		virtual void process() = 0;
 
 		virtual void on_start() {};
 		virtual void on_stop() {};
+
+		int cid() const { return _cid; };
+	private:
+		int _cid;
 	};
 
 }

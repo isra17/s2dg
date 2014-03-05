@@ -16,8 +16,12 @@ namespace s2dg {
 			Debug();
 			virtual ~Debug();
 
-			void update() override;
+			void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
+
+		private:
+			std::unique_ptr<sf::Shape> _drawable;
 		};
 	}
 }
+
 #endif

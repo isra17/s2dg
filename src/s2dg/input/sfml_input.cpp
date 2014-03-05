@@ -5,7 +5,7 @@
 using namespace s2dg;
 
 SfmlInput::SfmlInput(std::shared_ptr<sf::Window> window)
- : _window(window) 
+ : Engine(SfmlInput::CID), _window(window) 
 {
 	
 }

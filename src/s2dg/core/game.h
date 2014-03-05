@@ -3,6 +3,8 @@
 
 #include <vector>
 #include <memory>
+#include <algorithm>
+#include <cassert>
 
 namespace s2dg {
 
@@ -18,6 +20,16 @@ namespace s2dg {
 		~Game();
 
 		void add_engine(Engine* engine);
+
+		// Return an engine
+		template<class T>
+		T* get_engine() {
+			auto engine = std::find_if(_engines.begin(), _engines.end(), [](Engine* e) { return e->cid() == T::CID; });
+			assert(engine != _engines.end());
+			T* typed_engine = dynamic_cast<T*>(*engine);
+			assert(typed_engine);
+			return typed_engine;
+		}
 
 		bool is_running() { return _running; };
 

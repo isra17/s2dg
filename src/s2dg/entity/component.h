@@ -5,18 +5,20 @@
 #include <cassert>
 #include <string>
 
+#include <SFML/Graphics.hpp>
+
 namespace s2dg {
 
 	class Entity;
 
-	class Component {
+	class Component : sf::Drawable {
 	public:
 		Component(int cid, std::string name);
 		virtual ~Component() {};
 
-		int cid() { return _cid; };
-		std::string name() { return _name; };
-		std::shared_ptr<Entity> owner() { return _owner; };
+		int cid() const { return _cid; };
+		std::string name() const { return _name; };
+		std::shared_ptr<Entity> owner() const { return _owner; };
 
 		virtual void init() {};
 		virtual void update() {};

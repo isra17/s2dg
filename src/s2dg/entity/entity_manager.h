@@ -14,12 +14,14 @@ namespace s2dg {
 	class EntityManager :
 		public Engine {
 	public:
+		static const int CID = 0xD97149EC;
+
 		EntityManager();
 		virtual ~EntityManager();
 
 		void process();
 
-		EntitySet* entity_set() { return &_entity_set; };
+		EntitySet& entity_set(){ return _entity_set; };
 
 	private:
 		EntitySet _entity_set;

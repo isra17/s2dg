@@ -2,7 +2,8 @@
 
 using namespace s2dg;
 
-Engine::Engine()
+Engine::Engine(int cid)
+: _cid(cid)
 {
 }
 
