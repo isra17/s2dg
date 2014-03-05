@@ -10,41 +10,20 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\src\s2dg\core\engine.cpp" />
-    <ClCompile Include="..\..\src\s2dg\core\game.cpp" />
-    <ClCompile Include="..\..\src\s2dg\entity\component.cpp" />
-    <ClCompile Include="..\..\src\s2dg\entity\component\debug.cpp" />
-    <ClCompile Include="..\..\src\s2dg\entity\entity.cpp" />
-    <ClCompile Include="..\..\src\s2dg\entity\entity_manager.cpp" />
-    <ClCompile Include="..\..\src\s2dg\gfx\sfml_renderer.cpp" />
-    <ClCompile Include="..\..\src\s2dg\input\sfml_input.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\src\s2dg\core\engine.h" />
-    <ClInclude Include="..\..\src\s2dg\core\game.h" />
-    <ClInclude Include="..\..\src\s2dg\entity\component.h" />
-    <ClInclude Include="..\..\src\s2dg\entity\component\debug.h" />
-    <ClInclude Include="..\..\src\s2dg\entity\entity.h" />
-    <ClInclude Include="..\..\src\s2dg\entity\entity_manager.h" />
-    <ClInclude Include="..\..\src\s2dg\gfx\sfml_renderer.h" />
-    <ClInclude Include="..\..\src\s2dg\input\sfml_input.h" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{3F522671-86D9-4F45-8983-C924BF4B5B3F}</ProjectGuid>
+    <ProjectGuid>{198FC873-0776-45B9-9209-C0F462317C3A}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>engine</RootNamespace>
-    <ProjectName>engine</ProjectName>
+    <RootNamespace>engine_demo</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -62,12 +41,14 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)..\..\src\;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)..\..\src;$(IncludePath)</IncludePath>
+    <LibraryPath>$(OutDir);$(LibraryPath)</LibraryPath>
     <IntDir>$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)..\..\src\;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)..\..\src;$(IncludePath)</IncludePath>
+    <LibraryPath>$(OutDir);$(LibraryPath)</LibraryPath>
     <IntDir>$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -82,6 +63,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>engine.lib;sfml-graphics.lib;sfml-window.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -100,8 +82,12 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>engine.lib;sfml-graphics.lib;sfml-window.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\demo\main.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

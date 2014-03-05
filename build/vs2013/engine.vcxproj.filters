@@ -3,15 +3,74 @@
   <ItemGroup>
     <Filter Include="Source Files">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx;h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    <Filter Include="Source Files\core">
+      <UniqueIdentifier>{88929a95-50ec-453a-862d-0bdb4ce657fb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Source Files\gfx">
+      <UniqueIdentifier>{e84e65f2-b6a0-4f1a-884a-2f97596449b3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\input">
+      <UniqueIdentifier>{4b325722-a784-46f1-b720-454f23bfa20d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\entity">
+      <UniqueIdentifier>{df872303-abbc-4f75-a62f-b598a560b128}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\entity\component">
+      <UniqueIdentifier>{1846fc25-b20b-440b-ba58-7ad4d0166735}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\s2dg\core\engine.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\s2dg\core\game.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\s2dg\gfx\sfml_renderer.cpp">
+      <Filter>Source Files\gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\s2dg\input\sfml_input.cpp">
+      <Filter>Source Files\input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\s2dg\entity\entity_manager.cpp">
+      <Filter>Source Files\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\s2dg\entity\entity.cpp">
+      <Filter>Source Files\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\s2dg\entity\component.cpp">
+      <Filter>Source Files\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\s2dg\entity\component\debug.cpp">
+      <Filter>Source Files\entity\component</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\s2dg\core\engine.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\s2dg\core\game.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\s2dg\gfx\sfml_renderer.h">
+      <Filter>Source Files\gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\s2dg\input\sfml_input.h">
+      <Filter>Source Files\input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\s2dg\entity\entity_manager.h">
+      <Filter>Source Files\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\s2dg\entity\entity.h">
+      <Filter>Source Files\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\s2dg\entity\component.h">
+      <Filter>Source Files\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\s2dg\entity\component\debug.h">
+      <Filter>Source Files\entity\component</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
