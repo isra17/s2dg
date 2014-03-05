@@ -10,6 +10,7 @@ Debug::Debug()
 {
 	_drawable->setOutlineColor(sf::Color::Red);
 	_drawable->setOutlineThickness(-2.f);
+	_drawable->setFillColor(sf::Color::Transparent);
 }
 
 

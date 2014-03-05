@@ -1,6 +1,8 @@
 #ifndef S2DG_ENGINE_H
 #define S2DG_ENGINE_H
 
+#include <SFML/System.hpp>
+
 namespace s2dg {
 
 	class Game;
@@ -10,7 +12,7 @@ namespace s2dg {
 		Engine(int cid);
 		virtual ~Engine();
 
-		virtual void process() = 0;
+		virtual void process(const sf::Time& elapsed) = 0;
 
 		virtual void on_start() {};
 		virtual void on_stop() {};

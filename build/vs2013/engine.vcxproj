@@ -15,6 +15,7 @@
     <ClCompile Include="..\..\src\s2dg\core\game.cpp" />
     <ClCompile Include="..\..\src\s2dg\entity\component.cpp" />
     <ClCompile Include="..\..\src\s2dg\entity\component\debug.cpp" />
+    <ClCompile Include="..\..\src\s2dg\entity\component\player_controller.cpp" />
     <ClCompile Include="..\..\src\s2dg\entity\entity.cpp" />
     <ClCompile Include="..\..\src\s2dg\entity\entity_manager.cpp" />
     <ClCompile Include="..\..\src\s2dg\gfx\sfml_renderer.cpp" />
@@ -25,10 +26,12 @@
     <ClInclude Include="..\..\src\s2dg\core\game.h" />
     <ClInclude Include="..\..\src\s2dg\entity\component.h" />
     <ClInclude Include="..\..\src\s2dg\entity\component\debug.h" />
+    <ClInclude Include="..\..\src\s2dg\entity\component\player_controller.h" />
     <ClInclude Include="..\..\src\s2dg\entity\entity.h" />
     <ClInclude Include="..\..\src\s2dg\entity\entity_manager.h" />
     <ClInclude Include="..\..\src\s2dg\gfx\sfml_renderer.h" />
     <ClInclude Include="..\..\src\s2dg\input\sfml_input.h" />
+    <ClInclude Include="..\..\src\s2dg\utils\math.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{3F522671-86D9-4F45-8983-C924BF4B5B3F}</ProjectGuid>

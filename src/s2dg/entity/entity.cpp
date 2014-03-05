@@ -12,6 +12,7 @@ void Entity::add_component(std::shared_ptr<Component> component) {
 	assert(_components.find(component->cid()) == _components.end());
 
 	_components[component->cid()] = component;
+	component->on_owned(shared_from_this());
 }
 
 std::shared_ptr<Component> Entity::get_component(int cid) const {
@@ -30,9 +31,9 @@ void Entity::init() {
 	}
 }
 
-void Entity::update() {
+void Entity::update(const sf::Time& elapsed) {
 	for (auto c : _components) {
-		c.second->update();
+		c.second->update(elapsed);
 	}
 }
 

@@ -10,7 +10,7 @@ namespace s2dg {
 
 	class Component;
 
-	class Entity {
+	class Entity : public std::enable_shared_from_this<Entity> {
 	public:
 		Entity();
 
@@ -25,13 +25,13 @@ namespace s2dg {
 			return get_component(C::CID);
 		};
 
-		const sf::Transformable& transform() const { return _transform; };
+		sf::Transformable& transform() { return _transform; };
 
 		// Init components
 		void init();
 
 		// Entity logic
-		void update();
+		void update(const sf::Time& elapsed);
 
 		// Free entity ressource
 		void deinit();

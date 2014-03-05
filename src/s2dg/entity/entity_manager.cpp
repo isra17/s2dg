@@ -11,8 +11,8 @@ EntityManager::EntityManager()
 EntityManager::~EntityManager() {}
 
 
-void EntityManager::process() {
+void EntityManager::process(const sf::Time& elapsed) {
 	for (auto entity : _entity_set) {
-		entity->update();
+		entity->update(elapsed);
 	}
 }

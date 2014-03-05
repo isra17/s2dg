@@ -13,7 +13,7 @@ SfmlInput::SfmlInput(std::shared_ptr<sf::Window> window)
 
 SfmlInput::~SfmlInput() { }
 
-void SfmlInput::process() {
+void SfmlInput::process(const sf::Time& elapsed) {
 	sf::Event event;
 	while (_window->pollEvent(event)) {
 		// "close requested" event: we close the window

@@ -19,7 +19,7 @@ namespace s2dg {
 		EntityManager();
 		virtual ~EntityManager();
 
-		void process();
+		void process(const sf::Time& elapsed) override;
 
 		EntitySet& entity_set(){ return _entity_set; };
 

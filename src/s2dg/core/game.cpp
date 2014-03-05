@@ -23,12 +23,16 @@ int Game::run() {
 	}
 
 	_running = true;
+	
+	_game_clock.restart();
 
 	// Game loop
 	while (_running) {
+		sf::Time elapsed = _game_clock.restart();
+
 		for (Engine* engine : _engines) {
 			// Process each engines
-			engine->process();
+			engine->process(elapsed);
 		}
 	}
 

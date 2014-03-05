@@ -6,6 +6,8 @@
 #include <algorithm>
 #include <cassert>
 
+#include <SFML/System.hpp>
+
 namespace s2dg {
 
 	class Engine;
@@ -37,6 +39,7 @@ namespace s2dg {
 		void stop();
 	private:
 		std::vector< Engine* > _engines;
+		sf::Clock _game_clock;
 		bool _running;
 	};
 

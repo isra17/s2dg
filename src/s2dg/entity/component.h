@@ -7,6 +7,8 @@
 
 #include <SFML/Graphics.hpp>
 
+#include "entity.h"
+
 namespace s2dg {
 
 	class Entity;
@@ -19,9 +21,11 @@ namespace s2dg {
 		int cid() const { return _cid; };
 		std::string name() const { return _name; };
 		std::shared_ptr<Entity> owner() const { return _owner; };
+		sf::Transformable& transform() { return _owner->transform(); };
 
 		virtual void init() {};
-		virtual void update() {};
+		virtual void update(const sf::Time& elapsed) {};
+		virtual void draw(sf::RenderTarget &target, sf::RenderStates states) const {};
 	private:
 		friend Entity;
 		void on_owned(std::shared_ptr<Entity> owner);

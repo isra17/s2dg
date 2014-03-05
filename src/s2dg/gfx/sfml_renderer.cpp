@@ -18,7 +18,7 @@ void SfmlRenderer::on_start() {
 	_entity_manager = Game::get_instance().get_engine<EntityManager>();
 }
 
-void SfmlRenderer::process() {
+void SfmlRenderer::process(const sf::Time& elapsed) {
 	_window->clear(sf::Color::Black);
 
 	for (auto entity : _entity_manager->entity_set()) {

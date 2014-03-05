@@ -16,8 +16,9 @@ namespace s2dg {
 		SfmlInput(std::shared_ptr<sf::Window> window);
 		virtual ~SfmlInput();
 
-		void process();
+		std::shared_ptr<sf::Window> window() const { return _window; };
 
+		void process(const sf::Time& elapsed) override;
 		void on_stop();
 	private:
 		std::shared_ptr<sf::Window> _window;

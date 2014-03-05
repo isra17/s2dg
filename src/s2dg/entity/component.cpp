@@ -1,4 +1,5 @@
 #include "component.h"
+#include "entity.h"
 
 #include <cassert>
 #include <string>

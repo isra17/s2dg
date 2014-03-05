@@ -21,7 +21,7 @@ namespace s2dg {
 		std::shared_ptr<sf::Window> window() { return _window; };
 
 		void on_start() override;
-		void process() override;
+		void process(const sf::Time& elapsed) override;
 
 	private:
 		std::shared_ptr<sf::RenderWindow> _window;
