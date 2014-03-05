@@ -1,0 +1,7 @@
+/bin
+/build/vs2013/Release
+/build/vs2013/Debug
+*.user
+*.sdf
+*.suo
+*.opensdf
