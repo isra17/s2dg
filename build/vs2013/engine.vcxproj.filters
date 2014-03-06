@@ -23,6 +23,9 @@
     <Filter Include="Source Files\utils">
       <UniqueIdentifier>{6a161763-66d3-4dcc-a126-50731bc7545b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\entity\component\debug">
+      <UniqueIdentifier>{c07756e0-35de-48b0-9769-e9b278a6c133}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\s2dg\core\engine.cpp">
@@ -46,11 +49,11 @@
     <ClCompile Include="..\..\src\s2dg\entity\component.cpp">
       <Filter>Source Files\entity</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\s2dg\entity\component\debug.cpp">
-      <Filter>Source Files\entity\component</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\s2dg\entity\component\player_controller.cpp">
       <Filter>Source Files\entity\component</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\s2dg\entity\component\debug.cpp">
+      <Filter>Source Files\entity\component\debug</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -75,14 +78,14 @@
     <ClInclude Include="..\..\src\s2dg\entity\component.h">
       <Filter>Source Files\entity</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\s2dg\entity\component\debug.h">
-      <Filter>Source Files\entity\component</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\s2dg\entity\component\player_controller.h">
       <Filter>Source Files\entity\component</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\s2dg\utils\math.h">
       <Filter>Source Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\s2dg\entity\component\debug.h">
+      <Filter>Source Files\entity\component\debug</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
